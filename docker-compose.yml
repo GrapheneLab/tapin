@@ -1,0 +1,10 @@
+version: "3"
+services:
+  faucet:
+    image: faucet
+    build:
+       context: .
+    restart: always
+    network_mode: "host"
+    volumes:
+     - ./config.yml:/opt/faucet/config.yml

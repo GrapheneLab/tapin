@@ -11,6 +11,14 @@ import traceback
 from . import config
 from graphenebase.account import PasswordKey
 log = app.logger
+from bitsharesbase.chains import known_chains
+from graphenebase.base58 import known_prefixes
+from bitsharesbase.chains import known_chains
+
+# set chain_id
+known_chains['XZEN'] = {}
+known_chains['XZEN']['core_symbol'] = 'XZEN'
+known_chains['XZEN']['chain_id'] = 'bbc54c6d31e69a7fa8b08b4c73f7f7a27707f79456e25eeb7dd5d387a93dee60'
 
 
 def api_error(msg):
